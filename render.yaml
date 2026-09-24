@@ -1,0 +1,14 @@
+services:
+  - type: worker
+    name: syrian-telegram-bot
+    env: python
+    region: frankfurt
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: 7999371850:AAFzy0dsBUuWyZ1Md_Kgj2EMH-N090KbIM0
+      - key: GROQ_API_KEY
+        value: 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
+      - key: PYTHON_VERSION
+        value: 3.10.11
